@@ -1,3 +1,1 @@
-# Rocket Academy Coding Bootcamp
-
-## UFO Express
+# Rocket Academy Coding Bootcamp: UFO Express
