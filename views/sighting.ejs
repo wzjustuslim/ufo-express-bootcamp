@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sighting Form</title>
+  </head>
+  <body>
+    <div>
+      <form action="/sighting" method="POST">
+        <label for="text">Text:</label><br />
+        <input type="text" id="text" name="text" value="" /><br /><br />
+        <label for="stats">Stats:</label><br />
+        <input type="text" id="stats" name="stats" value="" /><br /><br />
+        <label for="date_time">Date_time:</label><br />
+        <input
+          type="text"
+          id="date_time"
+          name="date_time"
+          value=""
+        /><br /><br />
+        <label for="report_link">Report_link:</label><br />
+        <input
+          type="text"
+          id="report_link"
+          name="report_link"
+          value=""
+        /><br /><br />
+        <label for="city">City:</label><br />
+        <input type="text" id="city" name="city" value="" /><br /><br />
+        <label for="state">State:</label><br />
+        <input type="text" id="state" name="state" value="" /><br /><br />
+        <label for="shape">Shape:</label><br />
+        <input type="text" id="shape" name="shape" value="" /><br /><br />
+        <label for="duration">Duration:</label><br />
+        <input type="text" id="duration" name="duration" value="" /><br /><br />
+        <label for="summary">Summary:</label><br />
+        <input type="text" id="summary" name="summary" value="" /><br /><br />
+        <label for="posted">Posted:</label><br />
+        <input type="text" id="posted" name="posted" value="" /><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

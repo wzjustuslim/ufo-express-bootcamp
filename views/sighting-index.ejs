@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Individual Sighting</title>
+  </head>
+  <body>
+    <h2>Sighting</h2>
+    <div>
+      <p><b>Text:</b> <% if (typeof text != 'undefined') { %> <%= text %> <% } %></p>
+      <p>
+        <b>Stats:</b> <% if (typeof stats != 'undefined') { %> <%= stats %> <% } %>
+      </p>
+      <p>
+        <b>Date_time:</b> <% if (typeof date_time != 'undefined') { %> <%= date_time %>
+        <% } %>
+      </p>
+      <p>
+        <b>Report_link:</b> <% if (typeof report_link != 'undefined') { %> <%=
+        report_link %> <% } %>
+      </p>
+      <p><b>City:</b> <% if (typeof city != 'undefined') { %> <%= city %> <% } %></p>
+      <p>
+        <b>State:</b> <% if (typeof state != 'undefined') { %> <%= state %> <% } %>
+      </p>
+      <p>
+        <b>Shape:</b> <% if (typeof shape != 'undefined') { %> <%= shape %> <% } %>
+      </p>
+      <p>
+        <b>Duration:</b> <% if (typeof duration != 'undefined') { %> <%= duration %> <%
+        } %>
+      </p>
+      <p>
+        <b>Summary:</b> <% if (typeof summary != 'undefined') { %> <%= summary %> <% }
+        %>
+      </p>
+      <p>
+        <b>Posted:</b> <% if (typeof posted != 'undefined') { %> <%= posted %> <% } %>
+      </p>
+    </div>
+  </body>
+</html>

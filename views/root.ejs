@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Root</title>
+  </head>
+  <body>
+    <div class="container">
+    
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6 col-lg-2">
+        <h2>Sighting</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col">
+        <form action="/sort" method="get">
+            <select class="form-select-sm" name="sort">
+              <option value="date-asc">Date Ascending</option>
+              <option value="date-desc">Date Descending</option>
+              <option value="shape-asc">Shape Ascending</option>
+              <option value="shape-desc">Shape Descending</option>
+              <option value="city-asc">City Ascending</option>
+              <option value="city-desc">City Ascending</option>
+            </select>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+    </div>
+ 
+    </div>
+      <div>
+            <div class="col">
+                  <table>
+                    <tr>
+                      <th>Date</th>
+                      <th>Shape</th>
+                      <th>City</th>
+                      <th></th>
+                    </tr>
+                    <% sightings.forEach(sight => { %>
+                    <tr>
+                      <td><%= sight.date_time %></td>
+                      <td><%= sight.shape %></td>
+                      <td><%= sight.city %></td>
+                      <td>
+                        <form action="/sighting/<%= sightings.indexOf(sight) %>/delete?_method=DELETE" method="post">
+                          <input type="submit" value="❌" />
+                        </form>
+                      </td>
+                    </tr>
+                    <% }); %>
+                  </table>
+            </div>
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
